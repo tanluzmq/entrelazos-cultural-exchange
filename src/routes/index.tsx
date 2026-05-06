@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import hero from "@/assets/hero.jpg";
 import logo from "@/assets/logo.png";
 import pMuralismo from "@/assets/p-muralismo.jpg";
@@ -197,6 +197,14 @@ function Programas() {
                 <span>·</span>
                 <span>{p.modalidad}</span>
               </div>
+              {p.titulo.startsWith("Jardín Botánico") && (
+                <Link
+                  to="/postular"
+                  className="mt-4 inline-block px-4 py-2 bg-vino text-primary-foreground rounded-full text-xs hover:opacity-90 transition"
+                >
+                  Postular al programa →
+                </Link>
+              )}
             </article>
           ))}
         </div>
@@ -430,6 +438,7 @@ function Index() {
       <Experiencia />
       <Plataforma />
       <Becas />
+      <GestionaExperiencia />
       <Testimonios />
       <ComunidadEntrelazos />
       <Footer />

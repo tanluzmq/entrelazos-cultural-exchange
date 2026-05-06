@@ -71,7 +71,7 @@ function EntrelazosLogo({ className = "" }: { className?: string }) {
       />
       <path d="M250 34C250 54 239 68 224 80" stroke="currentColor" strokeWidth="4" strokeLinecap="round" />
       <path d="M250 34C250 54 261 68 276 80" stroke="currentColor" strokeWidth="4" strokeLinecap="round" />
-      <path d="M121 24V42M112 33H130" stroke="var(--color-vino)" strokeWidth="7" strokeLinecap="round" />
+      <path d="M121 24V42M112 33H130" stroke="var(--vino)" strokeWidth="7" strokeLinecap="round" />
       <path d="M91 50C91 42 98 36 106 36C114 36 121 42 121 50V68H91V50Z" stroke="currentColor" strokeWidth="5" strokeLinejoin="round" />
       <circle cx="79" cy="51" r="10" stroke="currentColor" strokeWidth="5" />
       <circle cx="139" cy="51" r="10" stroke="currentColor" strokeWidth="5" />
@@ -405,7 +405,7 @@ function Footer() {
       <div className="max-w-7xl mx-auto">
         <div className="grid md:grid-cols-4 gap-12 mb-16">
           <div className="md:col-span-2">
-            <img src={logo} alt="Entrelazos" className="h-20 w-auto mb-6 brightness-0 invert" />
+            <EntrelazosLogo className="mb-6 h-16 w-auto text-background" />
             <p className="font-display text-3xl max-w-md leading-tight">Tejer Latinoamérica con quienes la habitan.</p>
           </div>
           <div>

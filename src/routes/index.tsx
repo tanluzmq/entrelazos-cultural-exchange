@@ -101,7 +101,7 @@ function Hero() {
       <div className="absolute inset-0 grain opacity-30" />
 
       <div className="relative max-w-7xl mx-auto px-6 pb-20 pt-40 w-full">
-        <p className="text-xs uppercase tracking-[0.3em] text-vino mb-6 reveal">Chile · México · Latinoamérica</p>
+        <p className="text-xs uppercase tracking-[0.3em] text-white mb-6 reveal">Chile · México · Latinoamérica</p>
         <h1 className="font-display text-[14vw] md:text-[9vw] leading-[0.9] text-foreground reveal" style={{ animationDelay: "0.1s" }}>
           Entre<span className="italic text-vino">lazos</span>
         </h1>

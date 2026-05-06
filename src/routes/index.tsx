@@ -387,7 +387,7 @@ function Footer() {
           <div>
             <p className="text-xs uppercase tracking-widest text-background/50 mb-4">Aliados</p>
             <ul className="space-y-2 text-sm text-background/80">
-              <li>UNAM</li><li>Universidad de Chile</li><li>UAM</li><li>UC Chile</li>
+              <li>UNAM</li><li>Universidad de Chile</li><li>UDLA Chile</li><li>UAM</li><li>UC Chile</li>
             </ul>
           </div>
           <div>

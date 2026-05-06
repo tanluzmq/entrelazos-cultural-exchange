@@ -65,7 +65,7 @@ function Nav() {
     <header className="fixed top-0 inset-x-0 z-50 backdrop-blur-md bg-background/70 border-b border-border/40">
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
         <a href="#top" className="flex items-center gap-2">
-          <img src={logo} alt="Entrelazos" className="h-9 w-auto" />
+          <img src={logo} alt="Entrelazos" className="h-14 w-auto" />
         </a>
         <nav className="hidden md:flex gap-8 text-sm text-muted-foreground">
           <a href="#programas" className="hover:text-foreground">Programas</a>
@@ -381,9 +381,7 @@ function Footer() {
       <div className="max-w-7xl mx-auto">
         <div className="grid md:grid-cols-4 gap-12 mb-16">
           <div className="md:col-span-2">
-            <div className="mb-6 bg-background/95 inline-block rounded-lg p-3">
-              <img src={logo} alt="Entrelazos" className="h-12 w-auto" />
-            </div>
+            <img src={logo} alt="Entrelazos" className="h-20 w-auto mb-6 brightness-0 invert" />
             <p className="font-display text-3xl max-w-md leading-tight">Tejer Latinoamérica con quienes la habitan.</p>
           </div>
           <div>

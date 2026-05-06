@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import hero from "@/assets/hero.jpg";
 import logo from "@/assets/logo.png";
 import pMuralismo from "@/assets/p-muralismo.jpg";
@@ -197,6 +197,14 @@ function Programas() {
                 <span>·</span>
                 <span>{p.modalidad}</span>
               </div>
+              {p.titulo.startsWith("Jardín Botánico") && (
+                <Link
+                  to="/postular"
+                  className="mt-4 inline-block px-4 py-2 bg-vino text-primary-foreground rounded-full text-xs hover:opacity-90 transition"
+                >
+                  Postular al programa →
+                </Link>
+              )}
             </article>
           ))}
         </div>
@@ -363,6 +371,31 @@ function Testimonios() {
   );
 }
 
+function GestionaExperiencia() {
+  return (
+    <section className="py-32 px-6 bg-petroleo text-primary-foreground relative overflow-hidden">
+      <div className="absolute inset-0 grain opacity-20" />
+      <div className="max-w-5xl mx-auto text-center relative">
+        <p className="text-xs uppercase tracking-[0.3em] text-arena mb-6">Tu intercambio, tu ritmo</p>
+        <h2 className="font-display text-5xl md:text-6xl mb-6 leading-tight">
+          Gestiona tu experiencia <span className="italic text-arena/90">de principio a fin</span>
+        </h2>
+        <p className="max-w-2xl mx-auto text-arena/80 mb-10">
+          Postulaciones, becas, familia anfitriona, talleres y comunidad: todo en un solo lugar.
+        </p>
+        <div className="flex flex-wrap gap-3 justify-center">
+          <Link to="/postular" className="px-7 py-4 bg-background text-foreground rounded-full text-sm hover:opacity-90 transition">
+            Gestiona tu experiencia
+          </Link>
+          <a href="#programas" className="px-7 py-4 border border-background/40 rounded-full text-sm hover:bg-background hover:text-foreground transition">
+            Ver programas
+          </a>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function ComunidadEntrelazos() {
   return (
     <section className="py-32 px-6 bg-vino text-primary-foreground">
@@ -430,6 +463,7 @@ function Index() {
       <Experiencia />
       <Plataforma />
       <Becas />
+      <GestionaExperiencia />
       <Testimonios />
       <ComunidadEntrelazos />
       <Footer />

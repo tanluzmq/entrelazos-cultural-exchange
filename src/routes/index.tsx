@@ -387,7 +387,7 @@ function Footer() {
       <div className="max-w-7xl mx-auto">
         <div className="grid md:grid-cols-4 gap-12 mb-16">
           <div className="md:col-span-2">
-            <EntrelazosLogo className="mb-6 h-16 w-auto text-background" />
+            <EntrelazosLogo className="mb-6 h-16 w-auto" />
             <p className="font-display text-3xl max-w-md leading-tight">Tejer Latinoamérica con quienes la habitan.</p>
           </div>
           <div>

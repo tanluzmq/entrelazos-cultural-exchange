@@ -13,6 +13,7 @@ import g3 from "@/assets/gallery-3.jpg";
 import s1 from "@/assets/student-1.jpg";
 import s2 from "@/assets/student-2.jpg";
 import s3 from "@/assets/student-3.jpg";
+import logo from "@/assets/logo.png";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -64,10 +65,7 @@ function Nav() {
     <header className="fixed top-0 inset-x-0 z-50 backdrop-blur-md bg-background/70 border-b border-border/40">
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
         <a href="#top" className="flex items-center gap-2">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" className="text-vino">
-            <path d="M2 12c4-8 16-8 20 0M2 12c4 8 16 8 20 0" stroke="currentColor" strokeWidth="1.3" />
-          </svg>
-          <span className="font-display text-xl tracking-tight">Entrelazos</span>
+          <img src={logo} alt="Entrelazos" className="h-9 w-auto" />
         </a>
         <nav className="hidden md:flex gap-8 text-sm text-muted-foreground">
           <a href="#programas" className="hover:text-foreground">Programas</a>
@@ -383,11 +381,8 @@ function Footer() {
       <div className="max-w-7xl mx-auto">
         <div className="grid md:grid-cols-4 gap-12 mb-16">
           <div className="md:col-span-2">
-            <div className="flex items-center gap-2 mb-6">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" className="text-arena">
-                <path d="M2 12c4-8 16-8 20 0M2 12c4 8 16 8 20 0" stroke="currentColor" strokeWidth="1.3" />
-              </svg>
-              <span className="font-display text-2xl">Entrelazos</span>
+            <div className="mb-6 bg-background/95 inline-block rounded-lg p-3">
+              <img src={logo} alt="Entrelazos" className="h-12 w-auto" />
             </div>
             <p className="font-display text-3xl max-w-md leading-tight">Tejer Latinoamérica con quienes la habitan.</p>
           </div>

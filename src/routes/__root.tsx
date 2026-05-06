@@ -75,9 +75,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { title: "Entrelazos — Aprender viviendo" },
       { name: "description", content: "Red de intercambio formativo colaborativo entre Chile y México para estudiantes de industrias creativas y culturales." },
       { property: "og:title", content: "Entrelazos — Aprender viviendo" },
-      { property: "og:description", content: "Intercambio formativo entre Chile y México: bootcamps, talleres y convivencia con familias anfitrionas." },
+      { property: "og:description", content: "Red de intercambio formativo colaborativo entre Chile y México para estudiantes de industrias creativas y culturales." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
+      { name: "twitter:title", content: "Entrelazos — Aprender viviendo" },
+      { name: "twitter:description", content: "Red de intercambio formativo colaborativo entre Chile y México para estudiantes de industrias creativas y culturales." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/faaffe35-a0d6-4d69-bba2-a93df6174121/id-preview-785c6fec--d9f86f8c-6f32-4e8b-94a9-60cdc157ed69.lovable.app-1778107440740.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/faaffe35-a0d6-4d69-bba2-a93df6174121/id-preview-785c6fec--d9f86f8c-6f32-4e8b-94a9-60cdc157ed69.lovable.app-1778107440740.png" },
     ],
     links: [
       {

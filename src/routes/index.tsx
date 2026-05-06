@@ -9,6 +9,7 @@ import pTextil from "@/assets/p-textil.jpg";
 import pFotografia from "@/assets/p-fotografia.jpg";
 import pCeramica from "@/assets/p-ceramica.jpg";
 import pVestuarioMx from "@/assets/p-vestuario-mx.jpg";
+import pJardinValdivia from "@/assets/p-jardin-valdivia.jpg";
 import g1 from "@/assets/gallery-1.jpg";
 import g2 from "@/assets/gallery-2.jpg";
 import g3 from "@/assets/gallery-3.jpg";
@@ -30,7 +31,7 @@ const programs = [
   { img: pFotografia, ciudad: "Atacama, CL", titulo: "Fotografía territorial", disciplina: "Fotografía", duracion: "3 semanas", modalidad: "Expedición", cupos: 9 },
   { img: pMuralismo, ciudad: "CDMX, MX", titulo: "Ilustración y gráfica popular", disciplina: "Ilustración", duracion: "4 semanas", modalidad: "Taller", cupos: 12 },
   { img: pCeramica, ciudad: "Guadalajara, MX", titulo: "Cerámica contemporánea", disciplina: "Cerámica", duracion: "5 semanas", modalidad: "Inmersión", cupos: 8 },
-  { img: pGrabado, ciudad: "Valdivia, CL", titulo: "Narrativas visuales y patrimonio", disciplina: "Comunicación visual", duracion: "4 semanas", modalidad: "Mixto", cupos: 10 },
+  { img: pJardinValdivia, ciudad: "Valdivia, CL", titulo: "Jardín Botánico · U. Austral de Chile", disciplina: "Botánica y patrimonio natural", duracion: "4 semanas", modalidad: "Inmersión", cupos: 10 },
 ];
 
 const steps = [

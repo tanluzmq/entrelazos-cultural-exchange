@@ -13,7 +13,6 @@ import g3 from "@/assets/gallery-3.jpg";
 import s1 from "@/assets/student-1.jpg";
 import s2 from "@/assets/student-2.jpg";
 import s3 from "@/assets/student-3.jpg";
-import logo from "@/assets/logo.png";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -60,12 +59,37 @@ function Thread({ className = "" }: { className?: string }) {
   );
 }
 
+function EntrelazosLogo({ className = "" }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 420 132" fill="none" aria-label="Entrelazos" role="img">
+      <path
+        d="M8 55H58C63 55 67 51 67 46V36C67 30 72 25 78 25H93C99 25 104 20 104 14C104 8 109 4 115 4H150C156 4 161 8 161 14V18C161 24 166 29 172 29H185C191 29 196 34 196 40V48C196 52 199 55 203 55H216C227 55 237 48 243 39C248 31 253 29 258 38C264 48 271 58 285 58H309C313 58 316 55 316 51V34L354 20C357 19 361 19 364 20L406 34V56H412"
+        stroke="currentColor"
+        strokeWidth="6"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path d="M250 34C250 54 239 68 224 80" stroke="currentColor" strokeWidth="4" strokeLinecap="round" />
+      <path d="M250 34C250 54 261 68 276 80" stroke="currentColor" strokeWidth="4" strokeLinecap="round" />
+      <path d="M121 24V42M112 33H130" stroke="var(--color-vino)" strokeWidth="7" strokeLinecap="round" />
+      <path d="M91 50C91 42 98 36 106 36C114 36 121 42 121 50V68H91V50Z" stroke="currentColor" strokeWidth="5" strokeLinejoin="round" />
+      <circle cx="79" cy="51" r="10" stroke="currentColor" strokeWidth="5" />
+      <circle cx="139" cy="51" r="10" stroke="currentColor" strokeWidth="5" />
+      <path d="M337 48H357M373 48H393M339 66V86M365 66V86M391 66V86" stroke="currentColor" strokeWidth="7" strokeLinecap="round" />
+      <path d="M26 101H394" stroke="currentColor" strokeWidth="3" strokeLinecap="round" />
+      <text x="210" y="120" textAnchor="middle" fill="currentColor" fontFamily="var(--font-display)" fontSize="36" fontWeight="500" letterSpacing="3">
+        ENTRELAZOS
+      </text>
+    </svg>
+  );
+}
+
 function Nav() {
   return (
-    <header className="fixed top-0 inset-x-0 z-50 backdrop-blur-md bg-background/70 border-b border-border/40">
-      <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
-        <a href="#top" className="flex items-center gap-2">
-          <img src={logo} alt="Entrelazos" className="h-14 w-auto" />
+    <header className="fixed top-0 inset-x-0 z-50 backdrop-blur-md bg-background/75 border-b border-border/30">
+      <div className="max-w-7xl mx-auto flex min-h-20 items-center justify-between gap-6 px-6 py-3">
+        <a href="#top" className="flex items-center py-2 pr-4 text-foreground" aria-label="Ir al inicio">
+          <EntrelazosLogo className="h-11 w-auto" />
         </a>
         <nav className="hidden md:flex gap-8 text-sm text-muted-foreground">
           <a href="#programas" className="hover:text-foreground">Programas</a>

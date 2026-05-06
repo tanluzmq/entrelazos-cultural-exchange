@@ -371,10 +371,6 @@ function Testimonios() {
   );
 }
 
-function ComunidadEntrelazos() {
-  return null as never;
-}
-
 function GestionaExperiencia() {
   return (
     <section className="py-32 px-6 bg-petroleo text-primary-foreground relative overflow-hidden">
@@ -400,7 +396,7 @@ function GestionaExperiencia() {
   );
 }
 
-function ComunidadEntrelazosReal() {
+function ComunidadEntrelazos() {
   return (
     <section className="py-32 px-6 bg-vino text-primary-foreground">
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">

@@ -8,6 +8,7 @@ import pGastronomia from "@/assets/p-gastronomia.jpg";
 import pTextil from "@/assets/p-textil.jpg";
 import pFotografia from "@/assets/p-fotografia.jpg";
 import pCeramica from "@/assets/p-ceramica.jpg";
+import pVestuarioMx from "@/assets/p-vestuario-mx.jpg";
 import g1 from "@/assets/gallery-1.jpg";
 import g2 from "@/assets/gallery-2.jpg";
 import g3 from "@/assets/gallery-3.jpg";
@@ -25,7 +26,7 @@ const programs = [
   { img: pGrabado, ciudad: "Valparaíso, CL", titulo: "Grabado experimental", disciplina: "Artes gráficas", duracion: "3 semanas", modalidad: "Taller", cupos: 10 },
   { img: pGastronomia, ciudad: "CDMX, MX", titulo: "Gastronomía tradicional mexicana", disciplina: "Gastronomía", duracion: "5 semanas", modalidad: "Presencial", cupos: 14 },
   { img: pTextil, ciudad: "Oaxaca, MX", titulo: "Diseño textil latinoamericano", disciplina: "Diseño", duracion: "4 semanas", modalidad: "Inmersión", cupos: 10 },
-  { img: pArquitectura, ciudad: "Chiloé, CL", titulo: "Vestuario artesanal", disciplina: "Diseño de moda", duracion: "4 semanas", modalidad: "Taller", cupos: 8 },
+  { img: pVestuarioMx, ciudad: "Oaxaca, MX", titulo: "Vestuario típico mexicano", disciplina: "Diseño de moda", duracion: "4 semanas", modalidad: "Taller", cupos: 8 },
   { img: pFotografia, ciudad: "Atacama, CL", titulo: "Fotografía territorial", disciplina: "Fotografía", duracion: "3 semanas", modalidad: "Expedición", cupos: 9 },
   { img: pMuralismo, ciudad: "CDMX, MX", titulo: "Ilustración y gráfica popular", disciplina: "Ilustración", duracion: "4 semanas", modalidad: "Taller", cupos: 12 },
   { img: pCeramica, ciudad: "Guadalajara, MX", titulo: "Cerámica contemporánea", disciplina: "Cerámica", duracion: "5 semanas", modalidad: "Inmersión", cupos: 8 },

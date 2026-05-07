@@ -166,7 +166,7 @@ function Programas() {
       <div className="max-w-7xl mx-auto">
         <div className="flex items-end justify-between mb-16 flex-wrap gap-6">
           <div>
-            <p className="text-xs uppercase tracking-[0.3em] text-vino mb-4">Programas disponibles</p>
+            <p className="text-xs uppercase tracking-[0.3em] text-vino mb-4">Experiencias disponibles</p>
             <h2 className="text-5xl md:text-6xl max-w-3xl">Diez maneras de habitar otro territorio.</h2>
           </div>
           <a href="#" className="text-sm underline underline-offset-4 hover:text-vino">Ver todos →</a>

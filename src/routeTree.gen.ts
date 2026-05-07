@@ -10,11 +10,29 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as PostularRouteImport } from './routes/postular'
+import { Route as ExperienciasRouteImport } from './routes/experiencias'
+import { Route as ComunidadRouteImport } from './routes/comunidad'
+import { Route as AppRouteImport } from './routes/app'
 import { Route as IndexRouteImport } from './routes/index'
 
 const PostularRoute = PostularRouteImport.update({
   id: '/postular',
   path: '/postular',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ExperienciasRoute = ExperienciasRouteImport.update({
+  id: '/experiencias',
+  path: '/experiencias',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ComunidadRoute = ComunidadRouteImport.update({
+  id: '/comunidad',
+  path: '/comunidad',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AppRoute = AppRouteImport.update({
+  id: '/app',
+  path: '/app',
   getParentRoute: () => rootRouteImport,
 } as any)
 const IndexRoute = IndexRouteImport.update({
@@ -25,27 +43,39 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/app': typeof AppRoute
+  '/comunidad': typeof ComunidadRoute
+  '/experiencias': typeof ExperienciasRoute
   '/postular': typeof PostularRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/app': typeof AppRoute
+  '/comunidad': typeof ComunidadRoute
+  '/experiencias': typeof ExperienciasRoute
   '/postular': typeof PostularRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/app': typeof AppRoute
+  '/comunidad': typeof ComunidadRoute
+  '/experiencias': typeof ExperienciasRoute
   '/postular': typeof PostularRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/postular'
+  fullPaths: '/' | '/app' | '/comunidad' | '/experiencias' | '/postular'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/postular'
-  id: '__root__' | '/' | '/postular'
+  to: '/' | '/app' | '/comunidad' | '/experiencias' | '/postular'
+  id: '__root__' | '/' | '/app' | '/comunidad' | '/experiencias' | '/postular'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AppRoute: typeof AppRoute
+  ComunidadRoute: typeof ComunidadRoute
+  ExperienciasRoute: typeof ExperienciasRoute
   PostularRoute: typeof PostularRoute
 }
 
@@ -56,6 +86,27 @@ declare module '@tanstack/react-router' {
       path: '/postular'
       fullPath: '/postular'
       preLoaderRoute: typeof PostularRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/experiencias': {
+      id: '/experiencias'
+      path: '/experiencias'
+      fullPath: '/experiencias'
+      preLoaderRoute: typeof ExperienciasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/comunidad': {
+      id: '/comunidad'
+      path: '/comunidad'
+      fullPath: '/comunidad'
+      preLoaderRoute: typeof ComunidadRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/app': {
+      id: '/app'
+      path: '/app'
+      fullPath: '/app'
+      preLoaderRoute: typeof AppRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/': {
@@ -70,6 +121,9 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AppRoute: AppRoute,
+  ComunidadRoute: ComunidadRoute,
+  ExperienciasRoute: ExperienciasRoute,
   PostularRoute: PostularRoute,
 }
 export const routeTree = rootRouteImport

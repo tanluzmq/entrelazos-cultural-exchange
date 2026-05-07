@@ -49,7 +49,7 @@ const steps = [
 const students = [
   { img: s1, nombre: "Camila R.", carrera: "Diseño Textil", uni: "UNAM", lugar: "→ Chiloé", quote: "Tejer con manos chilenas cambió cómo pienso el oficio." },
   { img: s2, nombre: "Tomás V.", carrera: "Arquitectura", uni: "U. de Chile", lugar: "→ Oaxaca", quote: "Aprendí más en una cocina oaxaqueña que en un semestre." },
-  { img: sTani, nombre: "Tani M.", carrera: "Artes Visuales", uni: "UAM", lugar: "→ Valparaíso", quote: "El cerro fue mi aula. Mi familia anfitriona, mi maestra." },
+  { img: sTani, nombre: "Tani M.", carrera: "Artes Visuales", uni: "UAM", lugar: "→ Oaxaca", quote: "El cerro fue mi aula. Mi familia anfitriona, mi maestra." },
 ];
 
 function Thread({ className = "" }: { className?: string }) {

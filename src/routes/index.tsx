@@ -79,7 +79,7 @@ function Nav() {
           <EntrelazosLogo className="h-11 w-auto" />
         </a>
         <nav className="hidden md:flex gap-8 text-sm text-muted-foreground">
-          <a href="#programas" className="hover:text-foreground">Programas</a>
+          <a href="#experiencias" className="hover:text-foreground">Experiencias</a>
           <a href="#como" className="hover:text-foreground">Cómo funciona</a>
           <a href="#comunidad" className="hover:text-foreground">Comunidad</a>
           <a href="#becas" className="hover:text-foreground">Becas</a>
@@ -119,8 +119,8 @@ function Hero() {
               Red de intercambio formativo colaborativo entre Chile y México para estudiantes de industrias creativas y culturales.
             </p>
             <div className="flex flex-wrap gap-3">
-              <a href="#programas" className="px-6 py-3.5 bg-primary text-primary-foreground rounded-full text-sm hover:bg-primary/90 transition">
-                Explorar programas
+              <a href="#experiencias" className="px-6 py-3.5 bg-primary text-primary-foreground rounded-full text-sm hover:bg-primary/90 transition">
+                Explorar experiencias
               </a>
               <a href="#" className="px-6 py-3.5 border border-foreground/30 rounded-full text-sm hover:bg-foreground hover:text-background transition">
                 Crear perfil
@@ -165,7 +165,7 @@ function Como() {
 
 function Programas() {
   return (
-    <section id="programas" className="py-32 px-6 bg-arena/40">
+    <section id="experiencias" className="py-32 px-6 bg-arena/40">
       <div className="max-w-7xl mx-auto">
         <div className="flex items-end justify-between mb-16 flex-wrap gap-6">
           <div>

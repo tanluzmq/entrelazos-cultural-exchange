@@ -137,7 +137,7 @@ function Como() {
         <div className="flex items-end justify-between mb-20 flex-wrap gap-6">
           <div>
             <p className="text-xs uppercase tracking-[0.3em] text-vino mb-4">Cómo funciona</p>
-            <h2 className="text-5xl md:text-6xl max-w-2xl">Un hilo que une dos países, seis pasos.</h2>
+            <h2 className="text-5xl md:text-6xl max-w-2xl">Un lazo que une dos países, con solo seis pasos.</h2>
           </div>
           <p className="text-muted-foreground max-w-xs">Cada nudo es una persona. Cada tramo, una historia que sigue tejiéndose.</p>
         </div>

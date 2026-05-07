@@ -11,6 +11,7 @@ import pCeramica from "@/assets/p-ceramica.jpg";
 import pVestuarioMx from "@/assets/p-vestuario-mx.jpg";
 import pJardinValdivia from "@/assets/p-jardin-valdivia.jpg";
 import pIlustracionMx from "@/assets/p-ilustracion-mx.jpg";
+import pChanchoGreda from "@/assets/p-chancho-greda.jpg";
 import g1 from "@/assets/gallery-1.jpg";
 import g2 from "@/assets/gallery-2.jpg";
 import g3 from "@/assets/gallery-3.jpg";
@@ -31,7 +32,7 @@ const programs = [
   { img: pVestuarioMx, ciudad: "Oaxaca, MX", titulo: "Vestuario típico mexicano", disciplina: "Diseño de moda", duracion: "4 semanas", modalidad: "Taller", cupos: 8 },
   { img: pFotografia, ciudad: "Atacama, CL", titulo: "Fotografía territorial", disciplina: "Fotografía", duracion: "3 semanas", modalidad: "Expedición", cupos: 9 },
   { img: pIlustracionMx, ciudad: "CDMX, MX", titulo: "Ilustración y gráfica popular", disciplina: "Ilustración", duracion: "4 semanas", modalidad: "Taller", cupos: 12 },
-  { img: pCeramica, ciudad: "Guadalajara, MX", titulo: "Cerámica contemporánea", disciplina: "Cerámica", duracion: "5 semanas", modalidad: "Inmersión", cupos: 8 },
+  { img: pChanchoGreda, ciudad: "Pomaire, CL", titulo: "Chancho de greda · alcancía artesanal", disciplina: "Cerámica tradicional", duracion: "5 semanas", modalidad: "Inmersión", cupos: 8 },
   { img: pJardinValdivia, ciudad: "Valdivia, CL", titulo: "Jardín Botánico · U. Austral de Chile", disciplina: "Botánica y patrimonio natural", duracion: "4 semanas", modalidad: "Inmersión", cupos: 10 },
 ];
 

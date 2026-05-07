@@ -199,14 +199,12 @@ function Programas() {
                 <span>·</span>
                 <span>{p.modalidad}</span>
               </div>
-              {p.titulo.startsWith("Jardín Botánico") && (
-                <Link
-                  to="/postular"
-                  className="mt-4 inline-block px-4 py-2 bg-vino text-primary-foreground rounded-full text-xs hover:opacity-90 transition"
-                >
-                  Postular a la experiencia →
-                </Link>
-              )}
+              <Link
+                to="/postular"
+                className="mt-4 inline-block px-4 py-2 bg-vino text-primary-foreground rounded-full text-xs hover:opacity-90 transition"
+              >
+                Postular a la experiencia →
+              </Link>
             </article>
           ))}
         </div>

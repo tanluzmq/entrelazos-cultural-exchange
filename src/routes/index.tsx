@@ -115,7 +115,7 @@ function Hero() {
             Aprender viviendo.
           </p>
           <div>
-            <p className="text-base md:text-lg text-muted-foreground max-w-md mb-8 font-bold">
+            <p className="text-base md:text-lg text-muted-foreground max-w-md mb-8 font-bold text-emerald-900">
               Red de intercambio formativo colaborativo entre Chile y México para estudiantes de industrias creativas y culturales.
             </p>
             <div className="flex flex-wrap gap-3">

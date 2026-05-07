@@ -204,7 +204,7 @@ function Programas() {
                   to="/postular"
                   className="mt-4 inline-block px-4 py-2 bg-vino text-primary-foreground rounded-full text-xs hover:opacity-90 transition"
                 >
-                  Postular al programa →
+                  Postular a la experiencia →
                 </Link>
               )}
             </article>

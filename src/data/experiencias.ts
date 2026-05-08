@@ -203,6 +203,14 @@ export const universidadesMexico = [
   "Universidad de las Américas Puebla",
 ];
 
+import tKiara from "@/assets/testimonio-kiara.png";
+import tMaira from "@/assets/testimonio-maira.png";
+import tDominique from "@/assets/testimonio-dominique.png";
+import tTani from "@/assets/testimonio-tani.png";
+import tCatalina from "@/assets/testimonio-catalina.png";
+import tDiana from "@/assets/testimonio-diana.png";
+import tAli from "@/assets/testimonio-ali.png";
+
 export type Testimonio = {
   nombre: string;
   pais: "Chile" | "México";
@@ -211,6 +219,7 @@ export type Testimonio = {
   carrera: string;
   universidad: string;
   resena: string;
+  foto?: string;
 };
 
 // Estudiantes chilenas viviendo experiencias en México y viceversa.
@@ -225,6 +234,7 @@ export const testimoniosComunidad: Testimonio[] = [
     universidad: "Universidad de Chile",
     resena:
       "En Oaxaca aprendí que la arquitectura no se dibuja sola: se conversa con el barrio, con el sol y con quien te abre la puerta. Volví viendo Santiago con otros ojos.",
+    foto: tKiara,
   },
   {
     nombre: "Maira A.",
@@ -235,6 +245,7 @@ export const testimoniosComunidad: Testimonio[] = [
     universidad: "Universidad Diego Portales",
     resena:
       "Pensé que iba a un semestre y volví con una segunda casa. La Roma me enseñó a diseñar más lento, escuchando primero el contexto.",
+    foto: tMaira,
   },
   {
     nombre: "Dominique M.",
@@ -245,6 +256,7 @@ export const testimoniosComunidad: Testimonio[] = [
     universidad: "Universidad Andrés Bello",
     resena:
       "Aprendí más en un mercado tapatío que en cualquier libro. Cocinar con maíz nixtamalizado me cambió la manera de entender mi propio oficio.",
+    foto: tDominique,
   },
   {
     nombre: "Tani M.",
@@ -255,6 +267,7 @@ export const testimoniosComunidad: Testimonio[] = [
     universidad: "Pontificia Universidad Católica",
     resena:
       "El cerro fue mi aula y mi familia anfitriona, mi maestra. Volví con un cuaderno lleno de color y una red que sigue viva.",
+    foto: tTani,
   },
   {
     nombre: "Catalina R.",
@@ -265,6 +278,7 @@ export const testimoniosComunidad: Testimonio[] = [
     universidad: "Universidad del Desarrollo",
     resena:
       "Yucatán me enseñó que el turismo puede ser un acto de cuidado. Aprendí a mirar la cultura sin consumirla.",
+    foto: tCatalina,
   },
   {
     nombre: "Diana",
@@ -275,6 +289,7 @@ export const testimoniosComunidad: Testimonio[] = [
     universidad: "Universidad Iberoamericana",
     resena:
       "Valparaíso es un taller a cielo abierto. Bajar y subir cerros con mi libreta me devolvió las ganas de hacer arte por gusto, no por entrega.",
+    foto: tDiana,
   },
   {
     nombre: "Ali",
@@ -285,5 +300,6 @@ export const testimoniosComunidad: Testimonio[] = [
     universidad: "UNAM",
     resena:
       "Vivir en un palafito y comer con la familia que me recibió me marcó más que cualquier clase. Entendí la arquitectura como un acto de hospitalidad.",
+    foto: tAli,
   },
 ];

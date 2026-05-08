@@ -15,7 +15,14 @@ export const Route = createFileRoute("/comunidad")({
   }),
 });
 
-function PhotoPlaceholder({ nombre }: { nombre: string }) {
+function PhotoPlaceholder({ nombre, foto }: { nombre: string; foto?: string }) {
+  if (foto) {
+    return (
+      <div className="aspect-[4/5] w-full rounded-2xl overflow-hidden bg-arena/60 border border-border">
+        <img src={foto} alt={nombre} className="w-full h-full object-cover" loading="lazy" />
+      </div>
+    );
+  }
   const inicial = nombre.charAt(0);
   return (
     <div className="aspect-[4/5] w-full rounded-2xl bg-arena/60 border border-border flex flex-col items-center justify-center text-muted-foreground">
@@ -77,7 +84,7 @@ function Bloque({ titulo, subtitulo, gente, tono }: { titulo: string; subtitulo:
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
           {gente.map((t) => (
             <article key={t.nombre} className="group">
-              <PhotoPlaceholder nombre={t.nombre} />
+              <PhotoPlaceholder nombre={t.nombre} foto={t.foto} />
               <div className="mt-5 flex items-baseline justify-between">
                 <h3 className="font-display text-2xl">{t.nombre}</h3>
                 <span className="text-xs text-petroleo">{t.pais} → {t.destino}</span>

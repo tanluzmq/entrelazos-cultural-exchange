@@ -109,6 +109,41 @@ function Storytelling() {
   );
 }
 
+function MisionVision() {
+  return (
+    <section className="py-32 px-6 bg-background relative overflow-hidden">
+      <div className="absolute inset-x-0 top-0 text-vino/30">
+        <Thread className="w-full h-10" />
+      </div>
+      <div className="max-w-6xl mx-auto">
+        <p className="text-xs uppercase tracking-[0.3em] text-vino mb-4 text-center">Manifiesto</p>
+        <h2 className="font-display text-4xl md:text-6xl text-center max-w-3xl mx-auto leading-[1.05] mb-24">
+          Aprender de otra cultura <span className="italic text-vino">desde dentro.</span>
+        </h2>
+
+        <div className="grid md:grid-cols-2 gap-16 md:gap-24 items-start">
+          <div className="relative">
+            <span className="absolute -left-2 -top-8 font-display text-7xl text-vino/15 select-none">01</span>
+            <p className="text-xs uppercase tracking-[0.3em] text-petroleo mb-5">Misión</p>
+            <p className="font-display text-2xl md:text-[1.7rem] leading-snug text-foreground/90">
+              Democratizar el acceso a experiencias internacionales formativas entre Chile y México mediante una red colaborativa que conecta estudiantes, universidades y comunidades a través del aprendizaje vivido, el intercambio cultural y la convivencia humana.
+            </p>
+          </div>
+          <div className="relative md:mt-16">
+            <span className="absolute -left-2 -top-8 font-display text-7xl text-vino/15 select-none">02</span>
+            <p className="text-xs uppercase tracking-[0.3em] text-petroleo mb-5">Visión</p>
+            <p className="font-display text-2xl md:text-[1.7rem] leading-snug text-foreground/90">
+              Convertirse en la principal red latinoamericana de intercambio formativo colaborativo, impulsando una nueva forma de aprender basada en la conexión humana, la experiencia cultural y el acceso equitativo a oportunidades internacionales.
+            </p>
+          </div>
+        </div>
+
+        <div className="text-vino/30 mt-24"><Thread className="w-full h-10" /></div>
+      </div>
+    </section>
+  );
+}
+
 function Teasers() {
   const cards = [
     { to: "/experiencias", label: "Experiencias formativas", desc: "Talleres y residencias en Chile y México." },
@@ -162,6 +197,7 @@ function Index() {
       <SiteNav />
       <Hero />
       <Como />
+      <MisionVision />
       <Storytelling />
       <Teasers />
       <CTA />

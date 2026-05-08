@@ -185,11 +185,11 @@ export const universidadesChile = [
   "Universidad Andrés Bello",
   "Universidad de Chile",
   "Pontificia Universidad Católica",
-  "Universidad de Las Américas",
   "Universidad Diego Portales",
-  "Universidad Técnica Federico Santa María",
-  "Universidad del Desarrollo",
   "Universidad de Santiago de Chile",
+  "Universidad del Desarrollo",
+  "Universidad Técnica Federico Santa María",
+  "Universidad de Las Américas",
 ];
 
 export const universidadesMexico = [
@@ -198,7 +198,7 @@ export const universidadesMexico = [
   "Universidad Iberoamericana",
   "Universidad Autónoma Metropolitana",
   "Universidad de Guadalajara",
+  "Universidad Anáhuac",
   "Universidad Autónoma de Nuevo León",
   "Universidad de las Américas Puebla",
-  "Universidad Anáhuac",
 ];

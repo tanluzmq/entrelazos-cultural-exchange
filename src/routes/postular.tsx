@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
+import { Link } from "@tanstack/react-router";
 import { SiteNav } from "@/components/site/SiteNav";
 import { SiteFooter } from "@/components/site/SiteFooter";
 import { universidadesChile, universidadesMexico } from "@/data/experiencias";
@@ -32,6 +33,19 @@ function PostularPage() {
           <p className="text-muted-foreground mb-12 max-w-lg">
             No es un trámite, es el principio de una conversación. Lee con calma, responde con calma. Te escribimos pronto.
           </p>
+
+          <div className="rounded-2xl border border-border bg-arena/40 p-8 mb-14">
+            <p className="text-xs uppercase tracking-[0.3em] text-vino mb-3">Universidades asociadas</p>
+            <h2 className="font-display text-2xl md:text-3xl leading-snug mb-4">
+              Carreras del área <span className="italic text-vino">artística y cultural.</span>
+            </h2>
+            <p className="text-sm text-muted-foreground mb-6">
+              Actualmente Entrelazos se encuentra enfocado en carreras del área artística y cultural. Trabajamos junto a universidades e instituciones de Chile y México para generar experiencias de intercambio académico y formación extracurricular en disciplinas creativas. Revisa si tu universidad es parte del programa.
+            </p>
+            <Link to="/universidades" className="inline-block px-5 py-3 border border-foreground/30 rounded-full text-sm hover:bg-foreground hover:text-background transition">
+              Ver universidades asociadas
+            </Link>
+          </div>
 
           {sent ? (
             <div className="rounded-2xl border border-border p-10 bg-arena/40">

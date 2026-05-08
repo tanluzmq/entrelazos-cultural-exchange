@@ -1,82 +1,94 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteNav } from "@/components/site/SiteNav";
 import { SiteFooter } from "@/components/site/SiteFooter";
-import s1 from "@/assets/student-1.jpg";
-import s2 from "@/assets/student-2.jpg";
-import s3 from "@/assets/student-3.jpg";
-import sTani from "@/assets/student-tani.png";
-import g1 from "@/assets/gallery-1.jpg";
-import g2 from "@/assets/gallery-2.jpg";
-import g3 from "@/assets/gallery-3.jpg";
+import { testimoniosComunidad } from "@/data/experiencias";
 
 export const Route = createFileRoute("/comunidad")({
   component: ComunidadPage,
   head: () => ({
     meta: [
-      { title: "Comunidad Entrelazos · Caras reales, historias en proceso" },
-      { name: "description", content: "Estudiantes, anfitriones y egresados de la red Entrelazos entre Chile y México." },
+      { title: "Comunidad Entrelazos · Historias entre Chile y México" },
+      { name: "description", content: "Estudiantes chilenas y mexicanas comparten su paso por la red Entrelazos." },
       { property: "og:title", content: "Comunidad Entrelazos" },
-      { property: "og:description", content: "El intercambio no termina cuando vuelves." },
+      { property: "og:description", content: "Caras reales, historias en proceso entre Chile y México." },
     ],
   }),
 });
 
-const students = [
-  { img: s1, nombre: "Camila R.", carrera: "Diseño Textil", uni: "UNAM", lugar: "→ Chiloé", quote: "Tejer con manos chilenas cambió cómo pienso el oficio." },
-  { img: s2, nombre: "Tomás V.", carrera: "Arquitectura", uni: "U. de Chile", lugar: "→ Oaxaca", quote: "Aprendí más en una cocina oaxaqueña que en un semestre." },
-  { img: sTani, nombre: "Tani M.", carrera: "Artes Visuales", uni: "UAM", lugar: "→ Oaxaca", quote: "El cerro fue mi aula. Mi familia anfitriona, mi maestra." },
-];
+function PhotoPlaceholder({ nombre }: { nombre: string }) {
+  const inicial = nombre.charAt(0);
+  return (
+    <div className="aspect-[4/5] w-full rounded-2xl bg-arena/60 border border-border flex flex-col items-center justify-center text-muted-foreground">
+      <span className="font-display text-6xl text-vino/40 mb-2">{inicial}</span>
+      <span className="text-[10px] uppercase tracking-[0.3em]">Foto pendiente</span>
+    </div>
+  );
+}
 
 function ComunidadPage() {
+  const chilenas = testimoniosComunidad.filter((t) => t.pais === "Chile");
+  const mexicanas = testimoniosComunidad.filter((t) => t.pais === "México");
+
   return (
     <main className="bg-background text-foreground">
       <SiteNav />
 
-      <section className="pt-36 pb-20 px-6">
+      <section className="pt-36 pb-16 px-6">
         <div className="max-w-7xl mx-auto">
           <p className="text-xs uppercase tracking-[0.3em] text-vino mb-4">Comunidad</p>
           <h1 className="font-display text-5xl md:text-7xl leading-[0.95] max-w-4xl mb-6">
             Caras reales. <span className="italic text-vino">Historias en proceso.</span>
           </h1>
-          <p className="text-muted-foreground max-w-xl mb-16">
-            Cada perfil cuenta lo que estudia, dónde estuvo y cómo lo recuerdan quienes le abrieron la puerta.
+          <p className="text-muted-foreground max-w-xl">
+            Una red viva entre Chile y México. Cada testimonio es de una estudiante que cruzó la frontera para aprender desde otra cultura, otra cocina, otro barrio.
           </p>
-
-          <div className="grid md:grid-cols-3 gap-10">
-            {students.map((s, i) => (
-              <div key={i} className="group">
-                <div className="aspect-[4/5] overflow-hidden rounded-2xl mb-5 bg-muted">
-                  <img src={s.img} alt={s.nombre} loading="lazy" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]" />
-                </div>
-                <div className="flex justify-between items-baseline mb-2">
-                  <h3 className="font-display text-2xl">{s.nombre}</h3>
-                  <span className="text-xs text-petroleo">{s.lugar}</span>
-                </div>
-                <p className="text-sm text-muted-foreground mb-4">{s.carrera} · {s.uni}</p>
-                <p className="font-display text-lg leading-snug italic text-foreground/90">"{s.quote}"</p>
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 
+      <Bloque titulo="De Chile a México" subtitulo="Estudiantes chilenas que vivieron su intercambio en México." gente={chilenas} />
+      <Bloque titulo="De México a Chile" subtitulo="Estudiantes mexicanas que vivieron su intercambio en Chile." gente={mexicanas} tono="petroleo" />
+
       <section className="py-24 px-6 bg-vino text-primary-foreground">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-          <div>
-            <p className="text-xs uppercase tracking-[0.3em] text-arena mb-4">Después del intercambio</p>
-            <h2 className="font-display text-4xl md:text-5xl mb-6">El intercambio no termina cuando vuelves.</h2>
-            <p className="text-arena/90 max-w-md mb-8">Foro, encuentros, residencias breves y proyectos colaborativos entre quienes ya pasaron por la red.</p>
-            <Link to="/postular" className="inline-block px-6 py-3.5 bg-background text-foreground rounded-full text-sm hover:opacity-90 transition">Unirme a la comunidad</Link>
-          </div>
-          <div className="grid grid-cols-2 gap-3">
-            {[s1, s2, s3, g1, g2, g3].map((src, i) => (
-              <img key={i} src={src} alt="" loading="lazy" className={`rounded-2xl object-cover ${i % 2 === 0 ? "aspect-[4/5]" : "aspect-square mt-8"}`} />
-            ))}
-          </div>
+        <div className="max-w-3xl mx-auto text-center">
+          <p className="text-xs uppercase tracking-[0.3em] text-arena mb-4">Después del intercambio</p>
+          <h2 className="font-display text-4xl md:text-5xl mb-6">El intercambio no termina cuando vuelves.</h2>
+          <p className="text-arena/90 mb-8">Foro, encuentros, residencias breves y proyectos colaborativos entre quienes ya pasaron por la red.</p>
+          <Link to="/postular" className="inline-block px-6 py-3.5 bg-background text-foreground rounded-full text-sm hover:opacity-90 transition">
+            Unirme a la comunidad
+          </Link>
         </div>
       </section>
 
       <SiteFooter />
     </main>
+  );
+}
+
+function Bloque({ titulo, subtitulo, gente, tono }: { titulo: string; subtitulo: string; gente: typeof testimoniosComunidad; tono?: "petroleo" }) {
+  return (
+    <section className="py-20 px-6">
+      <div className="max-w-7xl mx-auto">
+        <div className="flex items-end justify-between flex-wrap gap-4 mb-12">
+          <div>
+            <p className={`text-xs uppercase tracking-[0.3em] mb-3 ${tono === "petroleo" ? "text-petroleo" : "text-vino"}`}>{titulo}</p>
+            <h2 className="font-display text-3xl md:text-4xl max-w-2xl">{subtitulo}</h2>
+          </div>
+        </div>
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
+          {gente.map((t) => (
+            <article key={t.nombre} className="group">
+              <PhotoPlaceholder nombre={t.nombre} />
+              <div className="mt-5 flex items-baseline justify-between">
+                <h3 className="font-display text-2xl">{t.nombre}</h3>
+                <span className="text-xs text-petroleo">{t.pais} → {t.destino}</span>
+              </div>
+              <p className="text-sm text-muted-foreground mt-1">{t.carrera} · {t.universidad}</p>
+              <p className="text-xs uppercase tracking-widest text-vino mt-1">{t.ciudad}</p>
+              <p className="font-display text-lg leading-snug italic text-foreground/90 mt-4">"{t.resena}"</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
   );
 }

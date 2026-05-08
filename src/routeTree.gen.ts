@@ -9,12 +9,18 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as UniversidadesRouteImport } from './routes/universidades'
 import { Route as PostularRouteImport } from './routes/postular'
 import { Route as ExperienciasRouteImport } from './routes/experiencias'
 import { Route as ComunidadRouteImport } from './routes/comunidad'
 import { Route as AppRouteImport } from './routes/app'
 import { Route as IndexRouteImport } from './routes/index'
 
+const UniversidadesRoute = UniversidadesRouteImport.update({
+  id: '/universidades',
+  path: '/universidades',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const PostularRoute = PostularRouteImport.update({
   id: '/postular',
   path: '/postular',
@@ -47,6 +53,7 @@ export interface FileRoutesByFullPath {
   '/comunidad': typeof ComunidadRoute
   '/experiencias': typeof ExperienciasRoute
   '/postular': typeof PostularRoute
+  '/universidades': typeof UniversidadesRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -54,6 +61,7 @@ export interface FileRoutesByTo {
   '/comunidad': typeof ComunidadRoute
   '/experiencias': typeof ExperienciasRoute
   '/postular': typeof PostularRoute
+  '/universidades': typeof UniversidadesRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -62,13 +70,33 @@ export interface FileRoutesById {
   '/comunidad': typeof ComunidadRoute
   '/experiencias': typeof ExperienciasRoute
   '/postular': typeof PostularRoute
+  '/universidades': typeof UniversidadesRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/app' | '/comunidad' | '/experiencias' | '/postular'
+  fullPaths:
+    | '/'
+    | '/app'
+    | '/comunidad'
+    | '/experiencias'
+    | '/postular'
+    | '/universidades'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/app' | '/comunidad' | '/experiencias' | '/postular'
-  id: '__root__' | '/' | '/app' | '/comunidad' | '/experiencias' | '/postular'
+  to:
+    | '/'
+    | '/app'
+    | '/comunidad'
+    | '/experiencias'
+    | '/postular'
+    | '/universidades'
+  id:
+    | '__root__'
+    | '/'
+    | '/app'
+    | '/comunidad'
+    | '/experiencias'
+    | '/postular'
+    | '/universidades'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -77,10 +105,18 @@ export interface RootRouteChildren {
   ComunidadRoute: typeof ComunidadRoute
   ExperienciasRoute: typeof ExperienciasRoute
   PostularRoute: typeof PostularRoute
+  UniversidadesRoute: typeof UniversidadesRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/universidades': {
+      id: '/universidades'
+      path: '/universidades'
+      fullPath: '/universidades'
+      preLoaderRoute: typeof UniversidadesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/postular': {
       id: '/postular'
       path: '/postular'
@@ -125,7 +161,18 @@ const rootRouteChildren: RootRouteChildren = {
   ComunidadRoute: ComunidadRoute,
   ExperienciasRoute: ExperienciasRoute,
   PostularRoute: PostularRoute,
+  UniversidadesRoute: UniversidadesRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}

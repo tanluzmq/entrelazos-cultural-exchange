@@ -185,11 +185,11 @@ export const universidadesChile = [
   "Universidad Andrés Bello",
   "Universidad de Chile",
   "Pontificia Universidad Católica",
-  "Universidad de Las Américas",
   "Universidad Diego Portales",
-  "Universidad Técnica Federico Santa María",
-  "Universidad del Desarrollo",
   "Universidad de Santiago de Chile",
+  "Universidad del Desarrollo",
+  "Universidad Técnica Federico Santa María",
+  "Universidad de Las Américas",
 ];
 
 export const universidadesMexico = [
@@ -198,7 +198,92 @@ export const universidadesMexico = [
   "Universidad Iberoamericana",
   "Universidad Autónoma Metropolitana",
   "Universidad de Guadalajara",
+  "Universidad Anáhuac",
   "Universidad Autónoma de Nuevo León",
   "Universidad de las Américas Puebla",
-  "Universidad Anáhuac",
+];
+
+export type Testimonio = {
+  nombre: string;
+  pais: "Chile" | "México";
+  destino: "Chile" | "México";
+  ciudad: string;
+  carrera: string;
+  universidad: string;
+  resena: string;
+};
+
+// Estudiantes chilenas viviendo experiencias en México y viceversa.
+// Las fotos se cargan manualmente: dejar el placeholder vacío en la card.
+export const testimoniosComunidad: Testimonio[] = [
+  {
+    nombre: "Kiara A.",
+    pais: "Chile",
+    destino: "México",
+    ciudad: "Oaxaca",
+    carrera: "Arquitectura",
+    universidad: "Universidad de Chile",
+    resena:
+      "En Oaxaca aprendí que la arquitectura no se dibuja sola: se conversa con el barrio, con el sol y con quien te abre la puerta. Volví viendo Santiago con otros ojos.",
+  },
+  {
+    nombre: "Maira A.",
+    pais: "Chile",
+    destino: "México",
+    ciudad: "Ciudad de México",
+    carrera: "Diseño",
+    universidad: "Universidad Diego Portales",
+    resena:
+      "Pensé que iba a un semestre y volví con una segunda casa. La Roma me enseñó a diseñar más lento, escuchando primero el contexto.",
+  },
+  {
+    nombre: "Dominique M.",
+    pais: "Chile",
+    destino: "México",
+    ciudad: "Guadalajara",
+    carrera: "Gastronomía",
+    universidad: "Universidad Andrés Bello",
+    resena:
+      "Aprendí más en un mercado tapatío que en cualquier libro. Cocinar con maíz nixtamalizado me cambió la manera de entender mi propio oficio.",
+  },
+  {
+    nombre: "Tani M.",
+    pais: "Chile",
+    destino: "México",
+    ciudad: "Oaxaca",
+    carrera: "Arte",
+    universidad: "Pontificia Universidad Católica",
+    resena:
+      "El cerro fue mi aula y mi familia anfitriona, mi maestra. Volví con un cuaderno lleno de color y una red que sigue viva.",
+  },
+  {
+    nombre: "Catalina R.",
+    pais: "Chile",
+    destino: "México",
+    ciudad: "Mérida",
+    carrera: "Turismo",
+    universidad: "Universidad del Desarrollo",
+    resena:
+      "Yucatán me enseñó que el turismo puede ser un acto de cuidado. Aprendí a mirar la cultura sin consumirla.",
+  },
+  {
+    nombre: "Diana",
+    pais: "México",
+    destino: "Chile",
+    ciudad: "Valparaíso",
+    carrera: "Arte",
+    universidad: "Universidad Iberoamericana",
+    resena:
+      "Valparaíso es un taller a cielo abierto. Bajar y subir cerros con mi libreta me devolvió las ganas de hacer arte por gusto, no por entrega.",
+  },
+  {
+    nombre: "Ali",
+    pais: "México",
+    destino: "Chile",
+    ciudad: "Chiloé",
+    carrera: "Arquitectura",
+    universidad: "UNAM",
+    resena:
+      "Vivir en un palafito y comer con la familia que me recibió me marcó más que cualquier clase. Entendí la arquitectura como un acto de hospitalidad.",
+  },
 ];

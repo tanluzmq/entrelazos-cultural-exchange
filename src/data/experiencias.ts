@@ -234,7 +234,7 @@ export const testimoniosComunidad: Testimonio[] = [
     universidad: "Universidad de Chile",
     resena:
       "En Oaxaca aprendí que la arquitectura no se dibuja sola: se conversa con el barrio, con el sol y con quien te abre la puerta. Volví viendo Santiago con otros ojos.",
-    foto: tKiara,
+    foto: tMaira,
   },
   {
     nombre: "Maira A.",
@@ -245,7 +245,7 @@ export const testimoniosComunidad: Testimonio[] = [
     universidad: "Universidad Diego Portales",
     resena:
       "Pensé que iba a un semestre y volví con una segunda casa. La Roma me enseñó a diseñar más lento, escuchando primero el contexto.",
-    foto: tMaira,
+    foto: tKiara,
   },
   {
     nombre: "Dominique M.",
